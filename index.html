@@ -293,6 +293,69 @@
       text-transform: uppercase;
     }
 
+    /* 4b. PORTAL ACCESS SECTION */
+    .portal-section {
+      padding: 5rem 8%;
+      background-color: #f8fafc;
+      text-align: center;
+    }
+
+    .portal-section h2 {
+      font-size: 2.2rem;
+      color: #0f172a;
+      margin-bottom: 0.8rem;
+    }
+
+    .portal-section > p {
+      color: #64748b;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      font-size: 0.98rem;
+    }
+
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .portal-card {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 1.8rem;
+      text-decoration: none;
+      display: block;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    }
+
+    .portal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(2, 132, 199, 0.12);
+      border-color: #0284c7;
+    }
+
+    .portal-card i {
+      font-size: 1.7rem;
+      color: #0284c7;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .portal-card h4 {
+      color: #0f172a;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .portal-card p {
+      color: #64748b;
+      font-size: 0.85rem;
+      line-height: 1.5;
+    }
+
     /* 5. STATS COUNTER BANNER */
     .stats-banner {
       background-color: #f1f5f9;
@@ -458,10 +521,11 @@
     </a>
 
     <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Us <i class="fa-solid fa-chevron-down"></i></a></li>
-      <li><a href="#">Academics <i class="fa-solid fa-chevron-down"></i></a></li>
-      <li><a href="#">Contact Us</a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#portals">Academics <i class="fa-solid fa-chevron-down"></i></a></li>
+      <li><a href="#contact">Contact Us</a></li>
+      <li><a href="login.php"><i class="fa-solid fa-right-to-bracket"></i> Login</a></li>
     </ul>
   </nav>
 
@@ -474,7 +538,7 @@
     
     <div class="hero-buttons">
       <i><a href="#about" class="btn btn-dark">LEARN MORE</a>
-      <a href="#" class="btn btn-outline">sign Up</a></i>
+      <a href="login.php" class="btn btn-outline">Sign In</a></i>
     </div>
   </section>
 
@@ -521,6 +585,62 @@
     </div>
   </section>
 
+  <!-- PORTAL ACCESS SECTION -->
+  <section class="portal-section" id="portals">
+    <h2>Access the System</h2>
+    <p>Jump straight into any module below. You'll be asked to sign in first if you don't already have an active session.</p>
+
+    <div class="portal-grid">
+      <a href="dashboard.php" class="portal-card">
+        <i class="fa-solid fa-chart-line"></i>
+        <h4>Dashboard</h4>
+        <p>Real-time analytics, attendance rates, and activity charts.</p>
+      </a>
+
+      <a href="students.php" class="portal-card">
+        <i class="fa-solid fa-user-graduate"></i>
+        <h4>Students</h4>
+        <p>Manage the student registry and QR code profiles.</p>
+      </a>
+
+      <a href="classes.php" class="portal-card">
+        <i class="fa-solid fa-chalkboard-user"></i>
+        <h4>Classes</h4>
+        <p>Create and manage academic class levels.</p>
+      </a>
+
+      <a href="attendance.php" class="portal-card">
+        <i class="fa-solid fa-qrcode"></i>
+        <h4>Attendance</h4>
+        <p>Manual checklists and webcam QR code scanning.</p>
+      </a>
+
+      <a href="reports.php" class="portal-card">
+        <i class="fa-solid fa-file-export"></i>
+        <h4>Reports</h4>
+        <p>Filter by class, student, or date, then export to PDF or Excel.</p>
+      </a>
+
+      <a href="users.php" class="portal-card">
+        <i class="fa-solid fa-users-gear"></i>
+        <h4>User Management</h4>
+        <p>Admin-only panel for managing staff accounts.</p>
+      </a>
+
+      <a href="profile.php" class="portal-card">
+        <i class="fa-solid fa-id-card"></i>
+        <h4>My Profile</h4>
+        <p>View and update your account details.</p>
+      </a>
+
+      <a href="change_password.php" class="portal-card">
+        <i class="fa-solid fa-key"></i>
+        <h4>Change Password</h4>
+        <p>Update your account authentication credentials.</p>
+      </a>
+    </div>
+  </section>
+
   <!-- STATS BANNER -->
   <section class="stats-banner">
     <div class="stat-item">
@@ -558,26 +678,24 @@
       <div class="footer-col">
         <h4>Useful Links</h4>
         <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Core Features</a></li>
-          <li><a href="#">Pricing Plans</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#portals">Core Features</a></li>
+          <li><a href="login.php">Sign In</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h4>Academic Portals</h4>
         <ul>
-          <li><a href="#">Student Information</a></li>
-          <li><a href="#">Library Management</a></li>
-          <li><a href="#">Transport Tracking</a></li>
-          <li><a href="#">Hostel Management</a></li>
-          <li><a href="#">Download Mobile App</a></li>
+          <li><a href="dashboard.php">Dashboard</a></li>
+          <li><a href="students.php">Student Information</a></li>
+          <li><a href="classes.php">Class Management</a></li>
+          <li><a href="attendance.php">Attendance Registry</a></li>
+          <li><a href="reports.php">Reports & Exports</a></li>
         </ul>
       </div>
 
-      <div class="footer-col footer-contact-info">
+      <div class="footer-col footer-contact-info" id="contact">
         <h4>Contact Us</h4>
         <p><i class="fa-solid fa-envelope"></i> info@codeslure.com</p>
         <p><i class="fa-solid fa-phone"></i> +91 7793042536</p>
